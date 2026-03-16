@@ -1,0 +1,120 @@
+name: Weekly Dev Report
+
+on:
+  schedule:
+    # Every Sunday at 11 PM Pacific (Monday 7 AM UTC)
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+    inputs:
+      manual_notes:
+        description: 'Optional notes to include in this week report'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout devlog repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.DEVLOG_TOKEN }}
+
+      - name: Checkout Oeconomia repos for git history
+        run: |
+          mkdir -p /tmp/repos
+
+          # Clone each repo shallowly for the past 30 days of history
+          git clone --shallow-since="30 days ago" \
+            https://x-access-token:${{ secrets.DEVLOG_TOKEN }}@github.com/${{ secrets.GH_ORG }}/oeconomia-contracts.git \
+            /tmp/repos/contracts 2>/dev/null || echo "contracts repo not found, skipping"
+
+          git clone --shallow-since="30 days ago" \
+            https://x-access-token:${{ secrets.DEVLOG_TOKEN }}@github.com/${{ secrets.GH_ORG }}/oeconomia-frontend.git \
+            /tmp/repos/frontend 2>/dev/null || echo "frontend repo not found, skipping"
+
+          git clone --shallow-since="30 days ago" \
+            https://x-access-token:${{ secrets.DEVLOG_TOKEN }}@github.com/${{ secrets.GH_ORG }}/eloqura-dex.git \
+            /tmp/repos/eloqura 2>/dev/null || echo "eloqura repo not found, skipping"
+
+      - name: Collect git activity
+        id: collect
+        run: |
+          SINCE="7 days ago"
+          OUTPUT=""
+
+          for repo in /tmp/repos/*/; do
+            NAME=$(basename "$repo")
+            LOG=$(git -C "$repo" log --since="$SINCE" --oneline --no-merges 2>/dev/null || echo "(no commits)")
+            OUTPUT="${OUTPUT}\n### $NAME\n${LOG}\n"
+          done
+
+          # Write to temp file (multiline safe)
+          echo -e "$OUTPUT" > /tmp/git_activity.txt
+          echo "Activity collected"
+
+      - name: Write manual notes if provided
+        run: |
+          if [ -n "${{ github.event.inputs.manual_notes }}" ]; then
+            echo "${{ github.event.inputs.manual_notes }}" > scripts/notes.md
+          fi
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Claude Code report agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GIT_ACTIVITY_FILE: /tmp/git_activity.txt
+        run: node scripts/generate-report.js
+
+      - name: Rebuild site index
+        run: node scripts/build-index.js
+
+      - name: Clear manual notes
+        run: echo "" > scripts/notes.md
+
+      - name: Commit and push reports
+        run: |
+          git config user.name "Oeconomia Bot"
+          git config user.email "bot@oeconomia.io"
+          git add docs/ scripts/notes.md
+          git diff --staged --quiet || git commit -m "chore: weekly report $(date +'%Y-W%V')"
+          git push
+
+  deploy-pages:
+    needs: generate-report
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './docs'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

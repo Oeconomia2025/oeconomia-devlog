@@ -1,0 +1,16 @@
+{
+  "name": "oeconomia-devlog",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Automated weekly development logs for the Oeconomia DeFi ecosystem",
+  "scripts": {
+    "generate": "node scripts/generate-report.js",
+    "build": "node scripts/build-index.js",
+    "report": "npm run generate && npm run build",
+    "preview": "npx serve docs"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=20"
+  }
+}

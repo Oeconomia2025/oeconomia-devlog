@@ -1,0 +1,33 @@
+{
+  "repos": [
+    {
+      "name": "oeconomia-contracts",
+      "description": "Smart contracts — OEC token, presale, Alluria CDP, staking"
+    },
+    {
+      "name": "oeconomia-frontend",
+      "description": "Staking dApp and main site frontend"
+    },
+    {
+      "name": "eloqura-dex",
+      "description": "Eloqura DEX frontend and TradingView integration"
+    }
+  ],
+  "context": {
+    "project": "Oeconomia",
+    "description": "Self-funded multi-protocol DeFi ecosystem",
+    "components": [
+      "OEC token — 500M supply, presale + staking emissions model",
+      "Eloqura DEX — AMM DEX with TradingView Advanced Charts",
+      "Alluria — Liquity-style CDP lending with ALUD stablecoin",
+      "Staking dApp — staking.oeconomia.io, testnet live"
+    ],
+    "stack": [
+      "Solidity smart contracts",
+      "React/TypeScript frontend",
+      "Hardhat/Foundry",
+      "Ethers.js"
+    ],
+    "phase": "Pre-mainnet — testnet active, presale contract in development"
+  }
+}
