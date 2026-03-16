@@ -4,6 +4,8 @@ date_range: Feb 16 - Feb 22, 2026
 generated: 2026-03-16T00:00:00Z
 ---
 
+![Oeconomia Weekly Update](../weekly-update-banner.png)
+
 # Oeconomia Devlog: Week 8, 2026
 
 ## Summary

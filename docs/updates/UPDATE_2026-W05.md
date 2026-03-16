@@ -3,6 +3,8 @@ week: 2026-W05
 date_range: Jan 26 - Feb 01, 2026
 ---
 
+![Oeconomia Weekly Update](../weekly-update-banner.png)
+
 # Oeconomia Update: Week 5
 
 A full UI polish sprint, tightening up layouts and sidebar behavior across all three Oeconomia frontends.

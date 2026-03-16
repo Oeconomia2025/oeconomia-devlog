@@ -3,6 +3,8 @@ week: 2026-W06
 date_range: Feb 02 - Feb 08, 2026
 ---
 
+![Oeconomia Weekly Update](../weekly-update-banner.png)
+
 # Oeconomia Update: Week 6
 
 The biggest week yet: 55 commits, three repos, and real smart contracts hitting Sepolia across the board.

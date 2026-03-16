@@ -3,6 +3,8 @@ week: 2026-W11
 date_range: Mar 09 - Mar 15, 2026
 ---
 
+![Oeconomia Weekly Update](../weekly-update-banner.png)
+
 # Oeconomia Update: Week 11
 
 Docs, features, and polish across the entire ecosystem. 38 commits in one week.

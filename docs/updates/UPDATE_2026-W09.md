@@ -3,6 +3,8 @@ week: 2026-W09
 date_range: Feb 23 - Mar 01, 2026
 ---
 
+![Oeconomia Weekly Update](../weekly-update-banner.png)
+
 # Oeconomia Update: Week 9
 
 Freewill launched, V2 contracts landed, and the staking dashboard got a fresh look.

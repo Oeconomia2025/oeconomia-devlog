@@ -3,6 +3,8 @@ week: 2026-W07
 date_range: Feb 09 - Feb 15, 2026
 ---
 
+![Oeconomia Weekly Update](../weekly-update-banner.png)
+
 # Oeconomia Update: Week 7
 
 OECsplorer launched from zero to deployed, the DAO Hub got a full redesign with real on-chain data, and all five apps received a coordinated ecosystem sidebar rollout.

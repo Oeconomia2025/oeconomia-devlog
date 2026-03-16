@@ -3,6 +3,8 @@ week: 2026-W10
 date_range: Mar 02 - Mar 08, 2026
 ---
 
+![Oeconomia Weekly Update](../weekly-update-banner.png)
+
 # Oeconomia Update: Week 10
 
 Alluria went on-chain this week, with smart contracts, Explorer support, and new tokens landing across the ecosystem.

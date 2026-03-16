@@ -3,6 +3,8 @@ week: 2026-W08
 date_range: Feb 16 - Feb 22, 2026
 ---
 
+![Oeconomia Weekly Update](../weekly-update-banner.png)
+
 # Oeconomia Update: Week 8
 
 69 commits across 5 repos this week as OECsplorer and Eloqura both got major upgrades.
