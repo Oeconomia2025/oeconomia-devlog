@@ -2,6 +2,10 @@
 
 * [Overview](README.md)
 
+## Oeconomia Monthly
+
+* [February 2026](monthly/MONTHLY_2026-02.md)
+
 ## Devlogs
 
 * [March 2026](devlogs/DEVLOG_2026-W11.md)
