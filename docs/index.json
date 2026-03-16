@@ -1,9 +1,9 @@
 [
   {
     "week": "2026-W11",
-    "date_range": "Mar 09 – Mar 15, 2026",
+    "date_range": "Mar 09 - Mar 15, 2026",
     "devlog": "devlogs/DEVLOG_2026-W11.md",
     "update": "updates/UPDATE_2026-W11.md",
-    "summary": "Docs, features, and polish across the entire ecosystem — GitBook docs for all 5 repos, Presale page, interactive rewards calculator, serverless token pricing, and automated devlog system."
+    "summary": "Docs, features, and polish across the entire ecosystem: GitBook docs for all 5 repos, Presale page, interactive rewards calculator, serverless token pricing, and automated devlog system."
   }
 ]

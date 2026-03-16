@@ -1,11 +1,11 @@
 ---
 week: 2026-W11
-date_range: Mar 09 – Mar 15, 2026
+date_range: Mar 09 - Mar 15, 2026
 ---
 
-# Oeconomia Update — Week 11
+# Oeconomia Update: Week 11
 
-Docs, features, and polish across the entire ecosystem — 38 commits in one week.
+Docs, features, and polish across the entire ecosystem. 38 commits in one week.
 
 **This week:**
 - GitBook documentation deployed across all 5 Oeconomia repos (Alluria, Eloqura, Staking, DAO Hub, Explorer)
@@ -17,4 +17,4 @@ Docs, features, and polish across the entire ecosystem — 38 commits in one wee
 [Full devlog](devlogs/DEVLOG_2026-W11.md)
 
 ---
-*Building Oeconomia — a multi-protocol DeFi ecosystem. Follow along.*
+*Building Oeconomia, a multi-protocol DeFi ecosystem. Follow along.*

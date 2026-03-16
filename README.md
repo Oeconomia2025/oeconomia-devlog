@@ -13,8 +13,8 @@ Every Sunday night at 11 PM Pacific, GitHub Actions:
 
 1. Clones all Oeconomia repos and extracts the past 7 days of git commits
 2. Sends that data to Claude API to generate two reports:
-   - **Detailed devlog** — full technical breakdown (contracts, frontend, decisions made)
-   - **Public update** — 3-5 bullet summary for community/Twitter
+   - **Detailed devlog:** full technical breakdown (contracts, frontend, decisions made)
+   - **Public update:** 3-5 bullet summary for community/Twitter
 3. Rebuilds the GitHub Pages site with the new entry
 4. Deploys automatically
 

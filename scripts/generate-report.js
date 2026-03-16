@@ -47,10 +47,11 @@ async function main() {
   const manualNotes = readFile(path.join(ROOT, 'scripts/notes.md'));
   const config = JSON.parse(readFile(path.join(ROOT, 'scripts/config.json')) || '{}');
 
-  const systemPrompt = `You are a technical writer for Oeconomia, a self-funded multi-protocol DeFi ecosystem. 
-The founder is a solo developer building: OEC token (500M supply presale/staking), Eloqura DEX, 
+  const systemPrompt = `You are a technical writer for Oeconomia, a self-funded multi-protocol DeFi ecosystem.
+The founder is a solo developer building: OEC token (500M supply presale/staking), Eloqura DEX,
 Alluria lending protocol (Liquity-style CDP with ALUD stablecoin), and staking infrastructure.
-Write with clarity and technical precision. Be specific about what changed — never vague.`;
+Write with clarity and technical precision. Be specific about what changed, never vague.
+IMPORTANT: Never use em dashes or long hyphens. Use colons, commas, or separate sentences instead. Regular hyphens for hyphenated words are fine.`;
 
   const userPrompt = `Generate a weekly development report for week ${weekKey} (${dateRange}).
 
@@ -80,7 +81,7 @@ date_range: ${dateRange}
 generated: ${iso}
 ---
 
-# 🛠 Oeconomia Devlog — Week ${week}, ${year}
+# Oeconomia Devlog: Week ${week}, ${year}
 
 ## Summary
 [2-3 sentences on the week's theme]
@@ -120,7 +121,7 @@ week: ${weekKey}
 date_range: ${dateRange}
 ---
 
-# Oeconomia Update — Week ${week}
+# Oeconomia Update: Week ${week}
 
 [One punchy sentence]
 
@@ -134,7 +135,7 @@ date_range: ${dateRange}
 [→ Full devlog](https://oeconomia.github.io/oeconomia-devlog/devlogs/DEVLOG_${weekKey}.html)
 
 ---
-*Building Oeconomia — multi-protocol DeFi. Follow the journey.*`;
+*Building Oeconomia, a multi-protocol DeFi ecosystem. Follow the journey.*`;
 
   // Call Claude API
   const response = await fetch('https://api.anthropic.com/v1/messages', {

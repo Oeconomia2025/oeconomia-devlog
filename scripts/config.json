@@ -2,7 +2,7 @@
   "repos": [
     {
       "name": "alluria-claude-workspace",
-      "description": "Smart contracts and frontend — Alluria CDP lending protocol"
+      "description": "Smart contracts and frontend: Alluria CDP lending protocol"
     },
     {
       "name": "eloqura-claude-workspace",
@@ -14,27 +14,27 @@
     },
     {
       "name": "oeconomia-dao-hub",
-      "description": "DAO Hub — governance, presale, roadmap"
+      "description": "DAO Hub: governance, presale, roadmap"
     },
     {
       "name": "oeconomia-explorer",
-      "description": "OECsplorer — block explorer for Oeconomia protocols"
+      "description": "OECsplorer: block explorer for Oeconomia protocols"
     },
     {
       "name": "freewill",
-      "description": "Freewill — Nous persistent memory hub (React + Supabase)"
+      "description": "Freewill: Nous persistent memory hub (React + Supabase)"
     }
   ],
   "context": {
     "project": "Oeconomia",
     "description": "Self-funded multi-protocol DeFi ecosystem",
     "components": [
-      "OEC token — 500M supply, presale + staking emissions model",
-      "Eloqura DEX — AMM DEX with TradingView Advanced Charts",
-      "Alluria — Liquity-style CDP lending with ALUD stablecoin",
-      "Staking dApp — staking.oeconomia.io, testnet live",
-      "DAO Hub — governance dashboard with presale and roadmap",
-      "OECsplorer — block explorer for Oeconomia protocols"
+      "OEC token: 500M supply, presale + staking emissions model",
+      "Eloqura DEX: AMM DEX with TradingView Advanced Charts",
+      "Alluria: Liquity-style CDP lending with ALUD stablecoin",
+      "Staking dApp: staking.oeconomia.io, testnet live",
+      "DAO Hub: governance dashboard with presale and roadmap",
+      "OECsplorer: block explorer for Oeconomia protocols"
     ],
     "stack": [
       "Solidity smart contracts",
@@ -42,6 +42,6 @@
       "Hardhat/Foundry",
       "Ethers.js"
     ],
-    "phase": "Pre-mainnet — testnet active, presale contract in development"
+    "phase": "Pre-mainnet, testnet active, presale contract in development"
   }
 }

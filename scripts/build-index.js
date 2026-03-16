@@ -43,7 +43,7 @@ for (const entry of entries) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oeconomia Devlog — ${entry.week}</title>
+<title>Oeconomia Devlog: ${entry.week}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
@@ -106,8 +106,8 @@ const indexHtml = `<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oeconomia — Dev Updates</title>
-<meta name="description" content="Weekly development logs for the Oeconomia DeFi ecosystem — OEC token, Eloqura DEX, Alluria lending protocol.">
+<title>Oeconomia: Dev Updates</title>
+<meta name="description" content="Weekly development logs for the Oeconomia DeFi ecosystem: OEC token, Eloqura DEX, Alluria lending protocol.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -399,7 +399,7 @@ const indexHtml = `<!DOCTYPE html>
 
   <main>
     ${entries.length === 0
-      ? '<div class="empty">// no reports yet — first one generates Sunday night</div>'
+      ? '<div class="empty">// no reports yet. First one generates Sunday night</div>'
       : `<div class="updates-grid">${cards}</div>`
     }
   </main>
