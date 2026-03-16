@@ -81,6 +81,8 @@ date_range: ${dateRange}
 generated: ${iso}
 ---
 
+![Oeconomia Weekly Update](../weekly-update-banner.png)
+
 # Oeconomia Devlog: Week ${week}, ${year}
 
 ## Summary
@@ -120,6 +122,8 @@ For the public update use this structure:
 week: ${weekKey}
 date_range: ${dateRange}
 ---
+
+![Oeconomia Weekly Update](../weekly-update-banner.png)
 
 # Oeconomia Update: Week ${week}
 
