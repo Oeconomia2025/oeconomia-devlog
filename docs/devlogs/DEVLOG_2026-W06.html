@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oeconomia Devlog: 2026-W06</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --border: #1e1e2e;
+    --accent: #00ff88;
+    --accent2: #7b6cff;
+    --text: #e2e2f0;
+    --muted: #6e6e8a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Syne', sans-serif; padding: 2rem; line-height: 1.7; }
+  .back { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent); text-decoration: none; display: inline-block; margin-bottom: 2rem; letter-spacing: 0.05em; }
+  .back:hover { opacity: 0.7; }
+  article { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem; }
+  h2 { font-size: 1.2rem; font-weight: 700; color: var(--accent2); margin: 2rem 0 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+  h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 1.25rem 0 0.5rem; }
+  ul { padding-left: 1.5rem; margin: 0.5rem 0; }
+  li { margin: 0.25rem 0; color: var(--text); }
+  p { margin: 0.75rem 0; color: var(--muted); }
+  strong { color: var(--text); }
+  a { color: var(--accent); }
+  pre, code { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; background: var(--surface); padding: 0.2em 0.4em; border-radius: 3px; }
+  .meta { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--muted); margin-bottom: 2rem; }
+</style>
+</head>
+<body>
+<article>
+  <a class="back" href="../../index.html">← all updates</a>
+  <p class="meta">Feb 02 - Feb 08, 2026 · 2026-W06</p>
+  <h1>Oeconomia Devlog: Week 6, 2026</h1></p><p><h2>Summary</h2>
+Week 6 was the biggest week yet for Oeconomia, with 55 commits across three repositories. The Eloqura DEX went from mock data to fully on-chain with real Sepolia contract deployments, Uniswap V3 swap integration, and live liquidity management. The OEC Staking app received a massive feature push including staking contract deployment, an on-chain faucet, admin panel, toast notifications, ROI calculator with real data, and extensive sidebar/UI refinements. Alluria Protocol also kicked off with the initial transformation of the OEC dashboard into a lending DApp.</p><p><h2>Completed</h2></p><p><h3>Smart Contracts</h3>
+<ul><li>Deployed Eloqura DEX contracts to Sepolia with real blockchain data integration</li></ul>
+<ul><li>Added Uniswap V3 swap integration alongside Eloqura liquidity management</li></ul>
+<ul><li>Deployed OEC staking contract to Sepolia and integrated it with the frontend</li></ul>
+<ul><li>Created and deployed OECFaucet smart contract for automatic token distribution</li></ul>
+<ul><li>Fixed corrupted OECFaucet.json artifact that contained an npm warning line</li></ul></p><p><h3>Frontend / DApp</h3>
+<ul><li><strong>alluria-claude-workspace:</strong> Transformed the oec-dashboard into the Alluria Protocol lending DApp</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Replaced all mock liquidity data with real Eloqura pool data from on-chain sources</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Built real token price calculations from pool reserves in the swap modal, then upgraded to use Uniswap quoter for accurate USD values</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Replaced fake Recent Swaps section with real on-chain swap events</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Added auto-calculation for liquidity deposit amounts and fixed add/remove functionality with real contract calls</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Added wallet balance fetching to liquidity position creation and wallet button to token selection modal</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Added OEC token to swap modal, fixed ETH price alignment, and hid scrollbar in token selection modal</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Reordered sidebar to swap Pools and Buy/Sell positions</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Optimized dashboard RPC calls with multicall batching and added fallback RPCs</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Deployed staking pools with pending rewards display on pool bars and increased spacing</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Added custom OEC loader component with branded spinner animation</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Connected header stats pills to real contract data with dynamic price formatting and TVL value</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Updated ROI Calculator to pull from real contract data instead of hardcoded values</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Added toast notifications, early withdraw confirmation modal, admin panel, and faucet page</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Built full faucet page with two-column layout, "Add OEC to Wallet" button, and proper WalletConnect button sizing</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Added light/dark mode toggle to sidebar, then reverted it after testing (decided to keep dark-only for now)</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Extensive sidebar refinements: moved collapse button to fixed position outside all containers, aligned it with header logo, fine-tuned vertical positioning, fixed visibility issues</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Unified sidebar button border radius and sizing, aligned bottom nav buttons with top nav style</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Added Social & Website dropdown to sidebar (later renamed to "Links"), matched dropdown width and alignment with the button</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Added Oeconomia external link button with gradient border and pure black background</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Improved network detection when switching chains</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Fixed staking rewards balance to exclude staked tokens, added staking rewards balance display on faucet page</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Fixed sidebar nav text wrapping during expand transition, fixed Admin link blinking on navigation</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Fixed staked/rewards column alignment on pool bars</li></ul></p><p><h3>Infrastructure / Tooling</h3>
+<ul><li>Added Hardhat artifacts to .gitignore in oec-claude-workspace</li></ul></p><p><h3>Documentation</h3>
+<ul><li>None this week</li></ul></p><p><h2>In Progress</h2>
+<ul><li>Alluria Protocol lending DApp, initial scaffold created from OEC dashboard</li></ul>
+<ul><li>Continued Eloqura DEX polish after moving to real on-chain data</li></ul>
+<ul><li>Sidebar collapse/expand behavior finalization across apps</li></ul></p><p><h2>Issues Encountered & Resolved</h2>
+<ul><li><strong>Corrupted ABI artifact:</strong> The OECFaucet.json file contained an npm warning line injected during build, causing JSON parse failures. Fixed by cleaning the file manually (commit bcb8a22).</li></ul>
+<ul><li><strong>Staking rewards double-counting:</strong> The rewards balance was incorrectly including staked tokens, inflating the displayed number. Fixed by excluding staked amounts from the rewards calculation (commit f42ebf5).</li></ul>
+<ul><li><strong>Sidebar collapse button scrolling off-screen:</strong> The collapse caret was positioned inside the sidebar container, so it scrolled away on long pages. Solved by moving it outside all containers and using true fixed positioning (commits 70392d8, cc517b2).</li></ul>
+<ul><li><strong>Light/dark mode conflicts:</strong> After implementing a theme toggle, visual inconsistencies appeared across components. Decided to revert the feature entirely and keep dark-only for a cleaner experience (commits 78debb3 through dd31b88).</li></ul>
+<ul><li><strong>Fake data masking real issues in Eloqura:</strong> Mock liquidity and swap data hid integration bugs. Replacing mocks with real on-chain data exposed and forced fixes for liquidity add/remove calls, price calculations, and event parsing.</li></ul>
+<ul><li><strong>RPC call volume on Eloqura dashboard:</strong> Too many individual RPC calls caused slow load times. Optimized by batching with multicall and adding fallback RPC endpoints (commit e0dbf6a).</li></ul></p><p><h2>Decisions Made</h2>
+<ul><li><strong>Deploy contracts before finishing UI:</strong> Staking and faucet contracts were deployed to Sepolia early in the week, then the frontend was built against real data. This "contracts first" approach caught integration issues sooner.</li></ul>
+<ul><li><strong>Revert light/dark mode, stay dark-only:</strong> After implementing the theme toggle, the team decided the visual inconsistencies across components were not worth the effort to fix right now. Dark mode is the brand identity, so the toggle was removed to keep things clean.</li></ul>
+<ul><li><strong>Move sidebar collapse button to true fixed position:</strong> Rather than fighting CSS within the sidebar container, the caret button was placed at the root DOM level with fixed positioning. This pattern was documented in CLAUDE.md for reuse across all Oeconomia apps.</li></ul>
+<ul><li><strong>Use Uniswap V3 Quoter for token pricing:</strong> Initial price calculations used raw pool reserves, but the Quoter contract provides more accurate prices that account for concentrated liquidity. The swap modal was upgraded accordingly.</li></ul>
+<ul><li><strong>Rename "Social & Website" to "Links":</strong> Shorter label fits better in the sidebar, especially when collapsed, and is more intuitive.</li></ul>
+<ul><li><strong>Unified sidebar button styling:</strong> All sidebar buttons now use rounded-lg and py-2 consistently. This was codified as a rule to prevent future style drift.</li></ul></p><p><h2>Next Week Goals</h2>
+<ul><li>Continue building out the Alluria Protocol lending interface</li></ul>
+<ul><li>Add more token pairs and liquidity pools on Eloqura</li></ul>
+<ul><li>Explore governance or DAO tooling integration</li></ul>
+<ul><li>Further polish staking UX based on testnet feedback</li></ul></p><p><h2>Metrics (if applicable)</h2>
+<ul><li>GitHub commits: 55 across 3 repositories</li></ul>
+</article>
+</body>
+</html>

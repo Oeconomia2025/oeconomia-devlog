@@ -5,5 +5,47 @@
     "devlog": "devlogs/DEVLOG_2026-W11.md",
     "update": "updates/UPDATE_2026-W11.md",
     "summary": "Docs, features, and polish across the entire ecosystem: GitBook docs for all 5 repos, Presale page, interactive rewards calculator, serverless token pricing, and automated devlog system."
+  },
+  {
+    "week": "2026-W10",
+    "date_range": "Mar 02 - Mar 08, 2026",
+    "devlog": "devlogs/DEVLOG_2026-W10.md",
+    "update": "updates/UPDATE_2026-W10.md",
+    "summary": "Alluria smart contracts deployed and integrated, new tokens added to Eloqura DEX, and Explorer updated with Alluria protocol support."
+  },
+  {
+    "week": "2026-W09",
+    "date_range": "Feb 23 - Mar 01, 2026",
+    "devlog": "devlogs/DEVLOG_2026-W09.md",
+    "update": "updates/UPDATE_2026-W09.md",
+    "summary": "Freewill persistent memory hub launched, OEC V2 contracts deployed, staking dashboard refreshed with stat cards and Claim All Rewards."
+  },
+  {
+    "week": "2026-W08",
+    "date_range": "Feb 16 - Feb 22, 2026",
+    "devlog": "devlogs/DEVLOG_2026-W08.md",
+    "update": "updates/UPDATE_2026-W08.md",
+    "summary": "Massive Eloqura DEX week: token detail pages, chart improvements, arbitrage bot, swap overhaul. Explorer gained wallet balances and on-chain pricing."
+  },
+  {
+    "week": "2026-W07",
+    "date_range": "Feb 09 - Feb 15, 2026",
+    "devlog": "devlogs/DEVLOG_2026-W07.md",
+    "update": "updates/UPDATE_2026-W07.md",
+    "summary": "OECsplorer launched from scratch, DAO Hub redesigned with portfolio and analytics, ecosystem sidebars added across all dApps."
+  },
+  {
+    "week": "2026-W06",
+    "date_range": "Feb 02 - Feb 08, 2026",
+    "devlog": "devlogs/DEVLOG_2026-W06.md",
+    "update": "updates/UPDATE_2026-W06.md",
+    "summary": "Staking and Eloqura DEX went live on Sepolia with real contracts. OECFaucet deployed, collapsible sidebar pattern established across dApps."
+  },
+  {
+    "week": "2026-W05",
+    "date_range": "Jan 26 - Feb 01, 2026",
+    "devlog": "devlogs/DEVLOG_2026-W05.md",
+    "update": "updates/UPDATE_2026-W05.md",
+    "summary": "Layout and sidebar polish across Alluria, Staking, and DAO Hub. Foundation work for the collapsible sidebar pattern."
   }
 ]

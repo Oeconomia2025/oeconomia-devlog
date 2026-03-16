@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oeconomia Devlog: 2026-W09</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --border: #1e1e2e;
+    --accent: #00ff88;
+    --accent2: #7b6cff;
+    --text: #e2e2f0;
+    --muted: #6e6e8a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Syne', sans-serif; padding: 2rem; line-height: 1.7; }
+  .back { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent); text-decoration: none; display: inline-block; margin-bottom: 2rem; letter-spacing: 0.05em; }
+  .back:hover { opacity: 0.7; }
+  article { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem; }
+  h2 { font-size: 1.2rem; font-weight: 700; color: var(--accent2); margin: 2rem 0 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+  h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 1.25rem 0 0.5rem; }
+  ul { padding-left: 1.5rem; margin: 0.5rem 0; }
+  li { margin: 0.25rem 0; color: var(--text); }
+  p { margin: 0.75rem 0; color: var(--muted); }
+  strong { color: var(--text); }
+  a { color: var(--accent); }
+  pre, code { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; background: var(--surface); padding: 0.2em 0.4em; border-radius: 3px; }
+  .meta { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--muted); margin-bottom: 2rem; }
+</style>
+</head>
+<body>
+<article>
+  <a class="back" href="../../index.html">← all updates</a>
+  <p class="meta">Feb 23 - Mar 01, 2026 · 2026-W09</p>
+  <h1>Oeconomia Devlog: Week 9, 2026</h1></p><p><h2>Summary</h2>
+Week 9 brought 15 commits across four repositories with a strong focus on the new Freewill (Nous) project and ecosystem-wide address updates. The Freewill persistent memory hub launched with its initial commit and rapidly iterated through mobile responsiveness fixes, iOS Safari compatibility, and API security hardening. Meanwhile, the Oeconomia Explorer was updated to reflect V2 contract addresses, and the OEC Staking dashboard received UX improvements to stat cards and reward claiming.</p><p><h2>Completed</h2></p><p><h3>Smart Contracts</h3>
+<ul><li>Updated OEC token address to V2 across the explorer (0x00904218319a045a96d776ec6a970f54741208e6)</li></ul>
+<ul><li>Updated faucet address to the new V2 faucet contract (0x29c900b48079634e5b1e19508fa347340ee786bb)</li></ul>
+<ul><li>Added achievement rewards contract to explorer constants</li></ul></p><p><h3>Frontend / DApp</h3>
+<ul><li><strong>alluria-claude-workspace:</strong> Matched ecosystem sidebar colors to the Alluria theme and migrated to Sepolia</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Moved Pool Achievements above Active Stakes on the dashboard for better visibility</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Styled stat cards with gradient backgrounds, white text, and chunked log fetching for performance</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Replaced header pills with equal-width stat cards, added stakers and stakes counts</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Added a "Claim All Rewards" button to the OEC Balance bar</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Swapped Eloqura and Alluria order in protocol cards and tabs to reflect priority</li></ul>
+<ul><li><strong>freewill:</strong> Built the Nous persistent memory hub from initial commit through multiple iterations</li></ul>
+<ul><li><strong>freewill:</strong> Added Psyche (Soul) to the hivemind and profiles API upsert</li></ul>
+<ul><li><strong>freewill:</strong> Fixed mobile responsiveness for the chat page</li></ul>
+<ul><li><strong>freewill:</strong> Fixed iOS Safari auto-zoom and keyboard issues in chat</li></ul>
+<ul><li><strong>freewill:</strong> Fixed mobile chat input position when the iOS keyboard opens</li></ul></p><p><h3>Infrastructure / Tooling</h3>
+<ul><li><strong>freewill:</strong> Added API bearer token authentication to all Netlify functions for security</li></ul></p><p><h3>Documentation</h3>
+<ul><li>None this week</li></ul></p><p><h2>In Progress</h2>
+<ul><li>Freewill (Nous) persistent memory hub, rapidly iterating on mobile UX</li></ul>
+<ul><li>V2 contract migration across the ecosystem</li></ul>
+<ul><li>OEC Staking dashboard stat card refinements</li></ul></p><p><h2>Issues Encountered & Resolved</h2>
+<ul><li><strong>iOS Safari auto-zoom on chat input:</strong> Mobile Safari was auto-zooming when users focused the chat input field, disrupting the layout. Fixed by addressing font size and viewport meta tag settings (commit d3329f7).</li></ul>
+<ul><li><strong>iOS keyboard pushing chat input off-screen:</strong> When the iOS keyboard opened, the chat input would shift to an incorrect position. Resolved by adjusting the input positioning logic to account for the virtual keyboard (commit d890ef7).</li></ul>
+<ul><li><strong>Mobile chat layout breaking on small screens:</strong> The Freewill chat page was not responsive on mobile devices. Fixed with a dedicated mobile responsiveness pass (commit 0f3ac16).</li></ul></p><p><h2>Decisions Made</h2>
+<ul><li><strong>Launch Freewill (Nous) as a new project in the ecosystem:</strong> A persistent memory hub for AI agents was added to the Oeconomia family. This opens up agent-to-agent communication and long-term memory capabilities.</li></ul>
+<ul><li><strong>Add API authentication to Freewill functions:</strong> Bearer token auth was added to all Netlify functions immediately after launch, prioritizing security before expanding features.</li></ul>
+<ul><li><strong>Migrate to V2 contract addresses in the explorer:</strong> The OEC token and faucet addresses were updated to V2, signaling the ecosystem's progression to the next generation of contracts.</li></ul>
+<ul><li><strong>Reorder protocol display to put Eloqura before Alluria:</strong> Protocol cards and tabs in the explorer were reordered to reflect current development priority and user interest.</li></ul>
+<ul><li><strong>Redesign OEC Staking stat cards:</strong> Header pills were replaced with equal-width gradient stat cards to improve readability and visual consistency. Stakers and stakes counts were added as new metrics.</li></ul>
+<ul><li><strong>Move Pool Achievements above Active Stakes:</strong> Achievements were promoted higher on the dashboard to give users immediate feedback on their progress.</li></ul></p><p><h2>Next Week Goals</h2>
+<ul><li>Continue polishing Freewill mobile experience and add more agent personalities</li></ul>
+<ul><li>Complete V2 contract migration across remaining apps</li></ul>
+<ul><li>Explore cross-app integration between Freewill memory and other Oeconomia protocols</li></ul>
+<ul><li>Further dashboard UX improvements on OEC Staking</li></ul></p><p><h2>Metrics (if applicable)</h2>
+<ul><li>GitHub commits: 15 across 4 repositories</li></ul>
+</article>
+</body>
+</html>

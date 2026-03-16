@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oeconomia Devlog: 2026-W10</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --border: #1e1e2e;
+    --accent: #00ff88;
+    --accent2: #7b6cff;
+    --text: #e2e2f0;
+    --muted: #6e6e8a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Syne', sans-serif; padding: 2rem; line-height: 1.7; }
+  .back { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent); text-decoration: none; display: inline-block; margin-bottom: 2rem; letter-spacing: 0.05em; }
+  .back:hover { opacity: 0.7; }
+  article { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem; }
+  h2 { font-size: 1.2rem; font-weight: 700; color: var(--accent2); margin: 2rem 0 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+  h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 1.25rem 0 0.5rem; }
+  ul { padding-left: 1.5rem; margin: 0.5rem 0; }
+  li { margin: 0.25rem 0; color: var(--text); }
+  p { margin: 0.75rem 0; color: var(--muted); }
+  strong { color: var(--text); }
+  a { color: var(--accent); }
+  pre, code { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; background: var(--surface); padding: 0.2em 0.4em; border-radius: 3px; }
+  .meta { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--muted); margin-bottom: 2rem; }
+</style>
+</head>
+<body>
+<article>
+  <a class="back" href="../../index.html">← all updates</a>
+  <p class="meta">Mar 02 - Mar 08, 2026 · 2026-W10</p>
+  <h1>Oeconomia Devlog: Week 10, 2026</h1></p><p><h2>Summary</h2>
+This week was all about Alluria integration across the ecosystem. Smart contracts, hooks, and on-chain actions landed in the Alluria workspace, the Explorer gained Alluria contract and token support, and Eloqura's DEX expanded with new token listings and performance improvements for liquidity and pricing.</p><p><h2>Completed</h2></p><p><h3>Smart Contracts</h3>
+<ul><li>Added Alluria smart contracts with hooks and integrated on-chain actions across all Alluria DApp pages</li></ul>
+<ul><li>Registered Alluria deployed contracts and ALUR token in the Explorer's contract registry</li></ul></p><p><h3>Frontend / DApp</h3>
+<ul><li><strong>Eloqura:</strong> Added ELOQ to the liquidity token list, fixed a bug where existing positions were not loading correctly, and parallelized pair fetching for faster page loads</li></ul>
+<ul><li><strong>Eloqura:</strong> Added ALUR, ALUD, and ELOQ tokens to the swap interface with a quick-select row and parallel price loading for snappier UX</li></ul>
+<ul><li><strong>Alluria:</strong> Integrated on-chain actions (contract calls, transaction flows) across all pages in the Alluria DApp</li></ul></p><p><h3>Infrastructure / Tooling</h3>
+<ul><li><strong>Explorer:</strong> Added INDEXER_START_BLOCK override so the indexer can target a specific deployment block instead of scanning from genesis</li></ul>
+<ul><li><strong>Explorer:</strong> Switched backfill strategy to getLogs-based approach for more reliable historical event ingestion</li></ul>
+<ul><li><strong>Explorer:</strong> Made contract rows clickable for easier navigation</li></ul></p><p><h3>Documentation</h3>
+<ul><li>None this week</li></ul></p><p><h2>In Progress</h2>
+<ul><li>Continued expansion of Alluria DApp functionality beyond initial contract integration</li></ul>
+<ul><li>Ongoing Explorer indexer tuning and backfill testing with the new getLogs strategy</li></ul></p><p><h2>Issues Encountered & Resolved</h2>
+<ul><li>Liquidity positions were not loading in Eloqura due to a data-fetching bug. Fixed alongside the ELOQ token addition by correcting how positions are queried.</li></ul>
+<ul><li>Explorer backfill was unreliable with the previous approach. Resolved by switching to a getLogs-based backfill with configurable start block.</li></ul></p><p><h2>Decisions Made</h2>
+<ul><li>Adopted parallel fetching for both pair data and token prices in Eloqura. Sequential calls were creating noticeable latency as the token list grew, so parallelizing keeps the UI responsive.</li></ul>
+<ul><li>Added an INDEXER_START_BLOCK environment variable to the Explorer indexer. This avoids scanning thousands of irrelevant blocks on chains where contracts were deployed late, saving time and RPC calls.</li></ul>
+<ul><li>Introduced a quick-select token row in Eloqura's swap UI. With ALUR, ALUD, and ELOQ joining the token list, users needed a faster way to pick frequently traded tokens.</li></ul></p><p><h2>Next Week Goals</h2>
+<ul><li>Continue building out Alluria DApp pages with deeper on-chain integration</li></ul>
+<ul><li>Stress-test the Explorer's getLogs backfill on larger block ranges</li></ul>
+<ul><li>Add pricing support for ALUR and ALUD in Eloqura's multi-hop quote logic</li></ul></p><p><h2>Metrics (if applicable)</h2>
+<ul><li>GitHub commits: 5 across 3 repositories</li></ul>
+</article>
+</body>
+</html>

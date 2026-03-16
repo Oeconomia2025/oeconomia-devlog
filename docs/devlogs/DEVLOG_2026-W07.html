@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oeconomia Devlog: 2026-W07</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --border: #1e1e2e;
+    --accent: #00ff88;
+    --accent2: #7b6cff;
+    --text: #e2e2f0;
+    --muted: #6e6e8a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Syne', sans-serif; padding: 2rem; line-height: 1.7; }
+  .back { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent); text-decoration: none; display: inline-block; margin-bottom: 2rem; letter-spacing: 0.05em; }
+  .back:hover { opacity: 0.7; }
+  article { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem; }
+  h2 { font-size: 1.2rem; font-weight: 700; color: var(--accent2); margin: 2rem 0 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+  h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 1.25rem 0 0.5rem; }
+  ul { padding-left: 1.5rem; margin: 0.5rem 0; }
+  li { margin: 0.25rem 0; color: var(--text); }
+  p { margin: 0.75rem 0; color: var(--muted); }
+  strong { color: var(--text); }
+  a { color: var(--accent); }
+  pre, code { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; background: var(--surface); padding: 0.2em 0.4em; border-radius: 3px; }
+  .meta { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--muted); margin-bottom: 2rem; }
+</style>
+</head>
+<body>
+<article>
+  <a class="back" href="../../index.html">← all updates</a>
+  <p class="meta">Feb 09 - Feb 15, 2026 · 2026-W07</p>
+  <h1>Oeconomia Devlog: Week 7, 2026</h1></p><p><h2>Summary</h2>
+Week 7 was a landmark week for Oeconomia with 60 commits across five repositories. The OECsplorer blockchain explorer went from initial commit to a fully deployed, production-ready app with a Railway backend, Prisma database, token detail pages, interactive learning lessons, and a smart getLogs-based indexer. The DAO Hub received a ground-up redesign with on-chain portfolio balances, cross-dApp DeFi position tracking, TradingView chart integration, and a new Ecosystem page. Meanwhile, Eloqura, Alluria, and OEC Staking all received a coordinated UI update adding ecosystem sidebars, hover cards, and visual polish across the board.</p><p><h2>Completed</h2></p><p><h3>Smart Contracts</h3>
+<ul><li>None this week</li></ul></p><p><h3>Frontend / DApp</h3>
+<ul><li><strong>oeconomia-explorer:</strong> Built and deployed OECsplorer from scratch, a protocol-aware blockchain explorer for the Oeconomia ecosystem (commit 455fbdb)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Added token detail pages with Etherscan-style events, holders, and API caching (commit 6b8a376)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Added pagination to all transaction tables (commit 27ed6b8)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Added a Learn page with Coursera-style crypto education hub, header updates, and nav styling (commit 4ffeb1d)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Added all 17 interactive learning lessons with quizzes and simulators (commit bdcd3f0)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Added DB-cached token metadata and webhook-driven balance tracking (commit b39f990)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Major explorer upgrade with UI polish, decoder expansion, and smart indexer (commit 34f5b35)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Nested Token Transfers card inside transaction detail card for cleaner layout (commit a16acf3)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Darkened IRID protocol color for light mode readability (commit c1177c0)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Fixed Prisma Decimal scientific notation issue</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Redesigned DAO Hub with Eloqura-style sidebar, price pills, and dashboard fixes (commit a2f6f45)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Redesigned analytics page and unified dark metallic theme across dashboard (commit 26e5425)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Added protocol-specific analytics views and unified dark metallic styling (commit be31950)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Switched from BSC to Sepolia testnet with on-chain portfolio balances (commit b8a5e70)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Added cross-dApp DeFi portfolio showing OEC Staking and Eloqura LP positions (commit c2233e9)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Added scroll-to-top on nav, matched icon colors, staking card gradients, smart expand (commit 15d7864)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Replaced ETH chart with TradingView widget and updated chart card styling (commit 48e0a14)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Changed TradingView chart default interval to 1M (commit cbeb23f)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Added Ecosystem page and fixed WalletConnect collapsed icon (commit 0ff57dd)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Restyled Ecosystem page, Portfolio holdings card, and sidebar popouts (commit c578d37)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Portfolio page overhaul with USD pricing, section totals, Alluria/Artivya mock data, sticky nav (commit ee5a7c1)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Hidden unstaked pools in Portfolio OEC Staking section (commit e5d5b58)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Added automatic token discovery and visibility modal to Portfolio Holdings (commit c246887)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Fixed token holdings blinking on background refresh (commit e86e3e2)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Fixed incorrect price applied to Oeconomia DAO token (commit 10a0615)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Aligned top bar pills with content and updated analytics chart cards (commit 8826b06)</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Hidden scrollbar and added dividers between portfolio token rows (commit 36300be)</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Added ecosystem sidebar, page transitions, and UI polish (commit c5afab8)</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Added ecosystem hover cards and tab toggle images to sidebar (commit 3bdfa3a)</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Fixed toggle hover card logos clipped by object-cover (commit 501b9c6)</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Styled Links button with active gradient when dropdown is open (commit 1b31dd1)</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Merged Examine into Pools page, fixed profile card issues, added bridge logos, price range toggle (commit 5ad4954)</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Fixed dust pair ratio forcing wrong liquidity amounts (commit b08d391)</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Fixed dust correction flow, handled missing walletClient, added error recovery (commit 10ac65e)</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Ignored dust-level reserves when auto-calculating pool ratio (commit f3d00e8)</li></ul>
+<ul><li><strong>eloqura-claude-workspace:</strong> Added pre-flight allowance check and better error messages for addLiquidity (commit f543a1f)</li></ul>
+<ul><li><strong>alluria-claude-workspace:</strong> Redesigned Alluria branding with purple theme, live prices, and refined sidebar (commit 76d0b3e)</li></ul>
+<ul><li><strong>alluria-claude-workspace:</strong> Added BNB price pill and separator between Alluria and market tokens (commit c87e66a)</li></ul>
+<ul><li><strong>alluria-claude-workspace:</strong> Added dashboard with tabbed charts, ecosystem sidebar, and UI improvements (commit 20eadb5)</li></ul>
+<ul><li><strong>alluria-claude-workspace:</strong> Added ecosystem hover cards, tab toggle images, and Positions page (commit 02ce4c8)</li></ul>
+<ul><li><strong>alluria-claude-workspace:</strong> Added missing action buttons, My Positions filter, and UI refinements (commit 8a61d98)</li></ul>
+<ul><li><strong>alluria-claude-workspace:</strong> Updated ALUR logo to correct no-border version (commit 60db7ff)</li></ul>
+<ul><li><strong>alluria-claude-workspace:</strong> UI refinements with equal-width filter buttons, larger pill fonts, fixed toggle card logos (commit 6915845)</li></ul>
+<ul><li><strong>alluria-claude-workspace:</strong> Added Ecosystem page with protocol explorer and detail views, then reverted and re-added (commits 21908d4, c01cdbc)</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Added ecosystem sidebar, page transitions, and UI polish (commit ceb98eb)</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Added ecosystem hover cards and tab toggle images to sidebar (commit fa6d5c2)</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Fixed toggle hover card logos clipped by object-cover (commit 39b655a)</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Styled Links button with active gradient when dropdown is open (commit 925a5bc)</li></ul></p><p><h3>Infrastructure / Tooling</h3>
+<ul><li><strong>oeconomia-explorer:</strong> Deployed backend to Railway with transaction decoding support (commit 5ac1c54)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Added Netlify deployment config for the frontend (commit 164f14e)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Added Railway deployment config and production static file serving (commit d2ab778)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Fixed server to bind to 0.0.0.0 for Railway proxy compatibility (commit 80c7a59)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Added Netlify proxy redirects to Railway backend (commit 0bf633d)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Triggered GitHub deploy with numReplicas config (commit b898cac)</li></ul>
+<ul><li><strong>oeconomia-explorer:</strong> Replaced block scanning with getLogs-based indexer to cut compute unit usage by approximately 77% (commit 1569fc7)</li></ul></p><p><h3>Documentation</h3>
+<ul><li>None this week</li></ul></p><p><h2>In Progress</h2>
+<ul><li>Eloqura DEX liquidity dust handling and edge case fixes</li></ul>
+<ul><li>OECsplorer indexer optimization after switching to getLogs-based approach</li></ul>
+<ul><li>Portfolio page refinements in DAO Hub, including token discovery and visibility controls</li></ul>
+<ul><li>Alluria Protocol Ecosystem page stabilization (reverted and re-added during the week)</li></ul></p><p><h2>Issues Encountered & Resolved</h2>
+<ul><li><strong>Dust-level reserves breaking liquidity math:</strong> When pool reserves were near zero (dust amounts), the auto-calculation for liquidity deposits forced incorrect ratios. Fixed by detecting dust-level reserves and ignoring them when computing the pool ratio (commits f3d00e8, b08d391).</li></ul>
+<ul><li><strong>Missing walletClient in dust correction flow:</strong> The dust correction code path did not account for cases where the walletClient was unavailable, causing silent failures. Added explicit checks and error recovery (commit 10ac65e).</li></ul>
+<ul><li><strong>Token holdings blinking on background refresh:</strong> Portfolio holdings in the DAO Hub flickered every time background data refreshed. Fixed by preserving existing state during refresh cycles (commit e86e3e2).</li></ul>
+<ul><li><strong>Incorrect DAO token price:</strong> The Oeconomia DAO token was displaying the wrong USD price due to a mapping error. Corrected the price source (commit 10a0615).</li></ul>
+<ul><li><strong>Hover card logos clipped by object-cover:</strong> Ecosystem toggle hover cards had logos cut off due to CSS object-cover. Fixed across Eloqura, OEC Staking, and Alluria simultaneously (commits 501b9c6, 39b655a, 6915845).</li></ul>
+<ul><li><strong>Prisma Decimal scientific notation:</strong> Large numbers stored as Prisma Decimals were rendered in scientific notation. Fixed the serialization to use full decimal strings.</li></ul>
+<ul><li><strong>Railway proxy binding:</strong> The OECsplorer backend defaulted to localhost, which Railway's proxy could not reach. Fixed by binding to 0.0.0.0 (commit 80c7a59).</li></ul>
+<ul><li><strong>Block scanning CU usage too high:</strong> The original block-by-block scanning approach consumed excessive compute units from the RPC provider. Replaced with getLogs-based indexing, cutting CU usage by roughly 77% (commit 1569fc7).</li></ul>
+<ul><li><strong>Alluria Ecosystem page reverted then re-added:</strong> The initial Ecosystem page commit had issues that required a full revert. It was rebuilt and re-committed cleanly (commits c01cdbc, 21908d4).</li></ul></p><p><h2>Decisions Made</h2>
+<ul><li><strong>Launch OECsplorer as a standalone explorer:</strong> Rather than relying on Etherscan for Oeconomia contract inspection, a custom protocol-aware explorer was built from scratch. This gives full control over how Oeconomia-specific data is displayed and indexed.</li></ul>
+<ul><li><strong>Use Railway for the explorer backend:</strong> Railway was chosen for backend hosting due to its simple deploy flow and compatibility with Prisma/PostgreSQL, while the frontend stays on Netlify with proxy redirects to the Railway API.</li></ul>
+<ul><li><strong>Switch DAO Hub from BSC to Sepolia:</strong> The DAO Hub was originally pointed at BSC, but since all Oeconomia contracts are on Sepolia testnet, the hub was migrated to match. This enabled real on-chain portfolio balances instead of mock data.</li></ul>
+<ul><li><strong>Replace ETH chart with TradingView widget:</strong> The custom chart component was replaced with TradingView's embeddable widget for more reliable, feature-rich charting with no maintenance burden.</li></ul>
+<ul><li><strong>Coordinated ecosystem sidebar rollout:</strong> All four frontend apps (Eloqura, OEC Staking, Alluria, DAO Hub) received the same ecosystem sidebar, hover cards, and tab toggle images in a single coordinated push. This ensures a unified navigation experience across the ecosystem.</li></ul>
+<ul><li><strong>Merge Examine into Pools on Eloqura:</strong> The separate Examine page was redundant with the Pools page. Merging them simplified navigation and reduced confusion.</li></ul>
+<ul><li><strong>getLogs-based indexer over block scanning:</strong> Block-by-block scanning was too expensive in RPC compute units. The getLogs approach filters events directly, reducing CU usage by approximately 77% while maintaining the same data coverage.</li></ul>
+<ul><li><strong>Add interactive learning content to OECsplorer:</strong> 17 lessons with quizzes and simulators were added to make the explorer an educational tool, not just an inspection tool. This supports onboarding new users to the Oeconomia ecosystem.</li></ul></p><p><h2>Next Week Goals</h2>
+<ul><li>Continue refining OECsplorer indexer performance and adding more protocol decoders</li></ul>
+<ul><li>Build out Alluria Protocol lending interface beyond the Ecosystem page</li></ul>
+<ul><li>Add more token pairs and liquidity options on Eloqura</li></ul>
+<ul><li>Finalize DAO Hub portfolio with real Alluria and Artivya data once those protocols are live</li></ul>
+<ul><li>Cross-app UI consistency pass to align all five frontends</li></ul></p><p><h2>Metrics (if applicable)</h2>
+<ul><li>GitHub commits: 60 across 5 repositories</li></ul>
+</article>
+</body>
+</html>

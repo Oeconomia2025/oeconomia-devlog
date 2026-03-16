@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oeconomia Devlog: 2026-W05</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --border: #1e1e2e;
+    --accent: #00ff88;
+    --accent2: #7b6cff;
+    --text: #e2e2f0;
+    --muted: #6e6e8a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Syne', sans-serif; padding: 2rem; line-height: 1.7; }
+  .back { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent); text-decoration: none; display: inline-block; margin-bottom: 2rem; letter-spacing: 0.05em; }
+  .back:hover { opacity: 0.7; }
+  article { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem; }
+  h2 { font-size: 1.2rem; font-weight: 700; color: var(--accent2); margin: 2rem 0 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+  h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 1.25rem 0 0.5rem; }
+  ul { padding-left: 1.5rem; margin: 0.5rem 0; }
+  li { margin: 0.25rem 0; color: var(--text); }
+  p { margin: 0.75rem 0; color: var(--muted); }
+  strong { color: var(--text); }
+  a { color: var(--accent); }
+  pre, code { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; background: var(--surface); padding: 0.2em 0.4em; border-radius: 3px; }
+  .meta { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--muted); margin-bottom: 2rem; }
+</style>
+</head>
+<body>
+<article>
+  <a class="back" href="../../index.html">← all updates</a>
+  <p class="meta">Jan 26 - Feb 01, 2026 · 2026-W05</p>
+  <h1>Oeconomia Devlog: Week 5, 2026</h1></p><p><h2>Summary</h2>
+Week 5 was a focused UI polish sprint across the entire Oeconomia ecosystem. All three active frontends (Alluria, OEC Staking, and DAO Hub) received layout and spacing refinements, with the OEC Staking app also getting a structural refactor of its layout component and updated social links. The goal was consistent sidebar behavior, tighter spacing, and better visual alignment across all platforms.</p><p><h2>Completed</h2></p><p><h3>Smart Contracts</h3>
+<ul><li>None this week</li></ul></p><p><h3>Frontend / DApp</h3>
+<ul><li><strong>alluria-claude-workspace:</strong> Reduced navigation bar padding, adjusted sticky alert icon padding, reduced sidebar header padding, and tuned sidebar item spacing in the layout component</li></ul>
+<ul><li><strong>oec-claude-workspace:</strong> Refactored the layout component for improved structure, added Wallet icon with style updates, updated social links, fixed template string syntax in layout.tsx, adjusted header padding, changed button alignment class from `items-center` to `items-left`, and fixed sidebar button alignment based on collapse state</li></ul>
+<ul><li><strong>oeconomia-dao-hub:</strong> Reduced navigation bar padding, adjusted sticky alert icon padding, reduced sidebar header padding, and tuned sidebar item spacing in the layout component (mirroring the Alluria changes for consistency)</li></ul></p><p><h3>Infrastructure / Tooling</h3>
+<ul><li>None this week</li></ul></p><p><h3>Documentation</h3>
+<ul><li>None this week</li></ul></p><p><h2>In Progress</h2>
+<ul><li>Continued sidebar collapse/expand behavior refinement across all apps</li></ul>
+<ul><li>Aligning the shared layout pattern so all three frontends feel cohesive</li></ul></p><p><h2>Issues Encountered & Resolved</h2>
+<ul><li><strong>Button alignment bug in OEC Staking:</strong> The sidebar buttons used `items-center` unconditionally, which caused misalignment when the sidebar was collapsed. Fixed by making the alignment class conditional on collapse state (`items-center` when collapsed, `items-left` when expanded).</li></ul>
+<ul><li><strong>Template string syntax error in layout.tsx:</strong> A malformed template literal in the OEC layout component was caught and corrected (commit e2cf25d).</li></ul></p><p><h2>Decisions Made</h2>
+<ul><li><strong>Unified spacing pass across all frontends:</strong> Rather than tweaking one app at a time, the same padding and spacing adjustments were applied to Alluria and DAO Hub in parallel. This keeps the user experience consistent as users move between Oeconomia products.</li></ul>
+<ul><li><strong>Layout refactor in OEC Staking before further features:</strong> The layout component was refactored for improved structure before adding new UI elements (Wallet icon, updated social links). Cleaning up the component first reduced the risk of regressions.</li></ul>
+<ul><li><strong>Conditional sidebar button alignment:</strong> Adopted the pattern of switching alignment classes based on sidebar collapsed state, rather than using a single class that compromises in both states.</li></ul></p><p><h2>Next Week Goals</h2>
+<ul><li>Continue cross-app UI consistency work</li></ul>
+<ul><li>Explore adding wallet connection status indicators to the sidebar</li></ul>
+<ul><li>Begin planning any new feature work now that the layout foundation is solid</li></ul></p><p><h2>Metrics (if applicable)</h2>
+<ul><li>GitHub commits: 16 across 3 repositories</li></ul>
+</article>
+</body>
+</html>
