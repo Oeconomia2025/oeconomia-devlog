@@ -100,7 +100,6 @@ scripts/
   config.json         ← repo list + project context
   notes.md            ← manual notes (cleared weekly)
 
-CLAUDE.md             ← task spec for Claude Code agent
 .github/workflows/
   weekly-report.yml   ← GitHub Actions schedule
 ```
