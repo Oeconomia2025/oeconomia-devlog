@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oeconomia Devlog — 2026-W11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --border: #1e1e2e;
+    --accent: #00ff88;
+    --accent2: #7b6cff;
+    --text: #e2e2f0;
+    --muted: #6e6e8a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Syne', sans-serif; padding: 2rem; line-height: 1.7; }
+  .back { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent); text-decoration: none; display: inline-block; margin-bottom: 2rem; letter-spacing: 0.05em; }
+  .back:hover { opacity: 0.7; }
+  article { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem; }
+  h2 { font-size: 1.2rem; font-weight: 700; color: var(--accent2); margin: 2rem 0 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+  h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 1.25rem 0 0.5rem; }
+  ul { padding-left: 1.5rem; margin: 0.5rem 0; }
+  li { margin: 0.25rem 0; color: var(--text); }
+  p { margin: 0.75rem 0; color: var(--muted); }
+  strong { color: var(--text); }
+  a { color: var(--accent); }
+  pre, code { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; background: var(--surface); padding: 0.2em 0.4em; border-radius: 3px; }
+  .meta { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--muted); margin-bottom: 2rem; }
+</style>
+</head>
+<body>
+<article>
+  <a class="back" href="../../index.html">← all updates</a>
+  <p class="meta">Mar 09 – Mar 15, 2026 · 2026-W11</p>
+  <h1>Oeconomia Devlog — Week 11, 2026</h1></p><p><h2>Summary</h2>
+Massive documentation and polish week. GitBook-compatible docs were written and deployed across all five Oeconomia repos. On the feature side, the DAO Hub gained a full Presale page with 3D visuals and a Roadmap & Milestones page, the Staking dApp got an interactive rewards calculator, and Eloqura's token pricing was moved to a serverless function for speed. 38 commits across 5 repositories.</p><p><h2>Completed</h2></p><p><h3>Smart Contracts</h3>
+<ul><li>None this week</li></ul></p><p><h3>Frontend / DApp</h3>
+<ul><li><strong>DAO Hub</strong> — Added Presale page with token selector and 3D glass cube background with scroll effects (f2d300a, fb56fcc)</li></ul>
+<ul><li><strong>DAO Hub</strong> — Added Roadmap & Milestones page with site-wide updates (7d41184)</li></ul>
+<ul><li><strong>DAO Hub</strong> — Full SEO implementation across the site (fb56fcc)</li></ul>
+<ul><li><strong>DAO Hub</strong> — Styled Oeconomia/PANTHEON header with white border and spaced letters (1a4e18b)</li></ul>
+<ul><li><strong>DAO Hub</strong> — Renamed home page to Oeconomia Dashboard (beedb2b)</li></ul>
+<ul><li><strong>Staking</strong> — Replaced ROI calculator with interactive rewards calculator, added Claim & Restake feature (4c5a34f)</li></ul>
+<ul><li><strong>Staking</strong> — Updated calculator: max price $1.00, added Rewards USD Value card (2391761)</li></ul>
+<ul><li><strong>Staking</strong> — Added Oeconomia/STAKING header branding with white border and spaced letters (ce137b1)</li></ul>
+<ul><li><strong>Eloqura DEX</strong> — Moved token pricing to Netlify serverless function for faster dashboard loads (af6d598, 04bc164)</li></ul>
+<ul><li><strong>Eloqura DEX</strong> — Added links page with ecosystem sites, contract addresses, and documentation (b45be33)</li></ul>
+<ul><li><strong>Explorer</strong> — Filtered external token transfers to show Oeconomia-only events (35ab524)</li></ul>
+<ul><li><strong>Explorer</strong> — Fixed Alluria protocol page to show all ALUR-related transactions (1e44c79)</li></ul></p><p><h3>Infrastructure / Tooling</h3>
+<ul><li>Initialized automated devlog system (oeconomia-devlog repo) for weekly GitHub Pages reports (88a983e)</li></ul>
+<ul><li>Removed stale replit.md file from Eloqura workspace (607c3de)</li></ul></p><p><h3>Documentation</h3>
+<ul><li><strong>Alluria</strong> — Added GitBook-compatible documentation for Alluria Protocol (61559fc)</li></ul>
+<ul><li><strong>Eloqura</strong> — Added GitBook-compatible documentation for Eloqura DEX (67917e7)</li></ul>
+<ul><li><strong>Staking</strong> — Added GitBook-compatible documentation for OEC Staking dApp (e423999)</li></ul>
+<ul><li><strong>DAO Hub</strong> — Added GitBook-compatible documentation for OEC DAO Hub (873316a)</li></ul>
+<ul><li><strong>Explorer</strong> — Added GitBook-compatible documentation (18 pages) for OECsplorer (ac33aa8)</li></ul>
+<ul><li>Cleaned up README icons and removed emoji from section headings across repos (ab0f848, 144e6ff, 0e19194)</li></ul>
+<ul><li>Added Solidity badges to Alluria and Eloqura READMEs (63697f8, 92d1b78)</li></ul>
+<ul><li>Added shield.io badge pills to Staking and Explorer READMEs (6c9f058, 792fd05)</li></ul>
+<ul><li>Configured .gitbook.yaml and matched navigation structures across all repos (c79934b, 17d7dd8, 3ac2e74, 1c62d45, 287e64f)</li></ul>
+<ul><li>Removed em dashes from Explorer documentation for consistency (770ea4f, be362b8)</li></ul>
+<ul><li>Renamed architecture page headings for cleaner navigation (d948f27, b236aea, d4323af)</li></ul></p><p><h2>In Progress</h2>
+<ul><li>Presale contract development (pre-mainnet phase)</li></ul>
+<ul><li>Automated weekly devlog pipeline (first report generated this week)</li></ul></p><p><h2>Issues Encountered & Resolved</h2>
+<ul><li>GitBook .gitbook.yaml caused sync issues in DAO Hub — removed and re-added with correct config (287e64f)</li></ul>
+<ul><li>Explorer was showing external token transfers unrelated to Oeconomia — filtered to protocol-only events (35ab524)</li></ul></p><p><h2>Decisions Made</h2>
+<ul><li><strong>GitBook for all documentation</strong> — Standardized on GitBook-compatible markdown docs across all 5 repos. Gives us a consistent, professional documentation layer that syncs automatically. Every repo now has a docs/ directory with SUMMARY.md navigation.</li></ul>
+<ul><li><strong>Serverless token pricing</strong> — Moved Eloqura's token price fetching from client-side to a Netlify serverless function. Reduces dashboard load time and avoids exposing RPC calls to the browser.</li></ul>
+<ul><li><strong>Interactive rewards calculator over static ROI</strong> — Replaced the static ROI calculator in Staking with an interactive version that lets users input stake amount and price assumptions. More useful for potential stakers evaluating the protocol.</li></ul>
+<ul><li><strong>Consistent branding headers</strong> — Applied the white-border spaced-letter header style (Oeconomia/STAKING, Oeconomia/PANTHEON) across dApps for visual consistency.</li></ul>
+<ul><li><strong>Automated devlog system</strong> — Built the oeconomia-devlog repo with GitHub Pages deployment, config-driven repo scanning, and a build script that generates both detailed devlogs and public updates.</li></ul></p><p><h2>Next Week Goals</h2>
+<ul><li>Continue presale contract development</li></ul>
+<ul><li>Deploy and verify GitBook documentation sites</li></ul>
+<ul><li>Test devlog GitHub Pages deployment end-to-end</li></ul>
+<ul><li>Address any remaining UX polish from this week's feature pushes</li></ul></p><p><h2>Metrics (if applicable)</h2>
+<ul><li>Testnet transactions: ongoing</li></ul>
+<ul><li>Contracts deployed: 0 this week</li></ul>
+<ul><li>GitHub commits: 38 across 5 repositories</li></ul>
+</article>
+</body>
+</html>

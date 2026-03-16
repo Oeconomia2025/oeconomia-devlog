@@ -1,16 +1,28 @@
 {
   "repos": [
     {
-      "name": "oeconomia-contracts",
-      "description": "Smart contracts — OEC token, presale, Alluria CDP, staking"
+      "name": "alluria-claude-workspace",
+      "description": "Smart contracts and frontend — Alluria CDP lending protocol"
     },
     {
-      "name": "oeconomia-frontend",
+      "name": "eloqura-claude-workspace",
+      "description": "Eloqura DEX frontend and TradingView integration"
+    },
+    {
+      "name": "oec-claude-workspace",
       "description": "Staking dApp and main site frontend"
     },
     {
-      "name": "eloqura-dex",
-      "description": "Eloqura DEX frontend and TradingView integration"
+      "name": "oeconomia-dao-hub",
+      "description": "DAO Hub — governance, presale, roadmap"
+    },
+    {
+      "name": "oeconomia-explorer",
+      "description": "OECsplorer — block explorer for Oeconomia protocols"
+    },
+    {
+      "name": "freewill",
+      "description": "Freewill — Nous persistent memory hub (React + Supabase)"
     }
   ],
   "context": {
@@ -20,7 +32,9 @@
       "OEC token — 500M supply, presale + staking emissions model",
       "Eloqura DEX — AMM DEX with TradingView Advanced Charts",
       "Alluria — Liquity-style CDP lending with ALUD stablecoin",
-      "Staking dApp — staking.oeconomia.io, testnet live"
+      "Staking dApp — staking.oeconomia.io, testnet live",
+      "DAO Hub — governance dashboard with presale and roadmap",
+      "OECsplorer — block explorer for Oeconomia protocols"
     ],
     "stack": [
       "Solidity smart contracts",
