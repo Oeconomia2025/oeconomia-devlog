@@ -5,8 +5,6 @@ total_commits: 215
 generated: 2026-03-16T00:00:00Z
 ---
 
-![Oeconomia Weekly Update](../weekly-update-banner.png)
-
 # Oeconomia Monthly: February 2026
 
 **215 commits. 5 weeks. 6 repositories. One ecosystem coming to life.**
