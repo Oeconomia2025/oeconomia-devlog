@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oeconomia Devlog: 2026-W12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --border: #1e1e2e;
+    --accent: #00ff88;
+    --accent2: #7b6cff;
+    --text: #e2e2f0;
+    --muted: #6e6e8a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Syne', sans-serif; padding: 2rem; line-height: 1.7; }
+  .back { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent); text-decoration: none; display: inline-block; margin-bottom: 2rem; letter-spacing: 0.05em; }
+  .back:hover { opacity: 0.7; }
+  article { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem; }
+  h2 { font-size: 1.2rem; font-weight: 700; color: var(--accent2); margin: 2rem 0 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+  h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 1.25rem 0 0.5rem; }
+  ul { padding-left: 1.5rem; margin: 0.5rem 0; }
+  li { margin: 0.25rem 0; color: var(--text); }
+  p { margin: 0.75rem 0; color: var(--muted); }
+  strong { color: var(--text); }
+  a { color: var(--accent); }
+  pre, code { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; background: var(--surface); padding: 0.2em 0.4em; border-radius: 3px; }
+  .meta { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--muted); margin-bottom: 2rem; }
+</style>
+</head>
+<body>
+<article>
+  <a class="back" href="../../index.html">← all updates</a>
+  <p class="meta">Mar 16 - Mar 22, 2026 · 2026-W12</p>
+  !<a href="../weekly-update-banner.png">Oeconomia Weekly Update</a></p><p><h1>Oeconomia Devlog: Week 12, 2026</h1></p><p><h2>Summary</h2>
+Performance and infrastructure week. All five dApps were migrated from public Sepolia RPCs to Alchemy for faster, more reliable blockchain calls. Route-level code splitting with React.lazy was added across four projects for faster initial page loads. Eloqura DEX received a full visual retheme and its limit orders contract was wired up with real on-chain pool data. The DAO Hub roadmap was updated to reflect recent milestones and a new Ecosystem GitBook space was added. 15 commits across 5 repositories.</p><p><h2>Completed</h2></p><p><h3>Smart Contracts</h3>
+<ul><li>None this week</li></ul></p><p><h3>Frontend / DApp</h3>
+<ul><li><strong>Eloqura DEX:</strong> Full retheme to dark gray palette with #5c69c2 accent buttons (bcb086a)</li></ul>
+<ul><li><strong>Eloqura DEX:</strong> Wired up limit orders contract, fixed price display, replaced mock pools with real on-chain data (bc47117)</li></ul>
+<ul><li><strong>Eloqura DEX:</strong> Fixed button hover text color, card shadows, and removed accent flash artifact (dc616dd)</li></ul>
+<ul><li><strong>DAO Hub:</strong> Updated roadmap with limit orders, real pool data, devlog system, GitBook docs, and ecosystem space milestones (63a470b)</li></ul></p><p><h3>Infrastructure / Tooling</h3>
+<ul><li><strong>All dApps:</strong> Switched Sepolia RPC to Alchemy across all 5 projects for faster blockchain calls (3adfa2f, 1b03f47, 4e14998, d5768b6, 2f91f51 -- one commit per repo)</li></ul>
+<ul><li><strong>4 dApps:</strong> Added route-level code splitting with React.lazy for faster initial page loads (cf423d0, 5b09026, 3b42b45, 2f91f51 -- Alluria, Staking, DAO Hub, Explorer)</li></ul></p><p><h3>Documentation</h3>
+<ul><li><strong>DAO Hub:</strong> Added standalone Ecosystem GitBook space with protocol links, logos, and contract addresses (dbdcfc7, 607ef70)</li></ul></p><p><h2>In Progress</h2>
+<ul><li>Presale contract development (pre-mainnet phase)</li></ul>
+<ul><li>Eloqura visual polish and theme refinement</li></ul></p><p><h2>Issues Encountered & Resolved</h2>
+<ul><li>Public Sepolia RPCs were causing slow and unreliable blockchain calls across all dApps. Migrated all five projects to Alchemy's free tier for consistent sub-second responses.</li></ul>
+<ul><li>Eloqura's retheme introduced a brief accent color flash on page load. Fixed by removing the transition artifact (dc616dd).</li></ul></p><p><h2>Decisions Made</h2>
+<ul><li><strong>Alchemy for all RPC calls:</strong> Standardized on Alchemy across the entire ecosystem instead of relying on public Sepolia endpoints. Free tier is sufficient for current testnet usage and provides much faster response times.</li></ul>
+<ul><li><strong>React.lazy code splitting:</strong> Added lazy loading for route-level components across four dApps. This reduces initial bundle size and improves time-to-interactive, especially on mobile.</li></ul>
+<ul><li><strong>Eloqura dark gray retheme:</strong> Moved away from the previous color scheme to a dark gray palette (#393a4e base) with #5c69c2 accent buttons. Gives Eloqura a more distinctive, professional identity within the ecosystem.</li></ul>
+<ul><li><strong>Real on-chain pool data:</strong> Replaced mock/placeholder pool data in Eloqura with live on-chain reads. Limit orders contract is now fully wired up with real price feeds.</li></ul>
+<ul><li><strong>Ecosystem GitBook space:</strong> Created a dedicated Ecosystem documentation space in the DAO Hub with protocol links, logos, and all contract addresses in one place.</li></ul></p><p><h2>Next Week Goals</h2>
+<ul><li>Continue presale contract development</li></ul>
+<ul><li>Monitor Alchemy usage across all dApps</li></ul>
+<ul><li>Further Eloqura UX polish</li></ul>
+<ul><li>Address any performance regressions from code splitting</li></ul></p><p><h2>Metrics (if applicable)</h2>
+<ul><li>Testnet transactions: ongoing</li></ul>
+<ul><li>Contracts deployed: 0 this week</li></ul>
+<ul><li>GitHub commits: 15 across 5 repositories</li></ul>
+</article>
+</body>
+</html>

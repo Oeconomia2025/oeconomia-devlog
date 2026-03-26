@@ -1,5 +1,12 @@
 [
   {
+    "week": "2026-W12",
+    "date_range": "Mar 16 - Mar 22, 2026",
+    "devlog": "devlogs/DEVLOG_2026-W12.md",
+    "update": "updates/UPDATE_2026-W12.md",
+    "summary": "Performance and polish: all 5 dApps migrated to Alchemy RPC, code-split routing added, Eloqura rethemed with real on-chain pool data and limit orders integration."
+  },
+  {
     "week": "2026-W11",
     "date_range": "Mar 09 - Mar 15, 2026",
     "devlog": "devlogs/DEVLOG_2026-W11.md",

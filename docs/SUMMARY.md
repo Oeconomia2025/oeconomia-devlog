@@ -8,7 +8,8 @@
 
 ## Devlogs
 
-* [March 2026](devlogs/DEVLOG_2026-W11.md)
+* [March 2026](devlogs/DEVLOG_2026-W12.md)
+  * [Week 12: Mar 16 - Mar 22](devlogs/DEVLOG_2026-W12.md)
   * [Week 11: Mar 09 - Mar 15](devlogs/DEVLOG_2026-W11.md)
   * [Week 10: Mar 02 - Mar 08](devlogs/DEVLOG_2026-W10.md)
 
@@ -23,7 +24,8 @@
 
 ## Public Updates
 
-* [March 2026](updates/UPDATE_2026-W11.md)
+* [March 2026](updates/UPDATE_2026-W12.md)
+  * [Week 12: Mar 16 - Mar 22](updates/UPDATE_2026-W12.md)
   * [Week 11: Mar 09 - Mar 15](updates/UPDATE_2026-W11.md)
   * [Week 10: Mar 02 - Mar 08](updates/UPDATE_2026-W10.md)
 
