@@ -1,5 +1,19 @@
 [
   {
+    "week": "2026-W14",
+    "date_range": "Mar 30 - Apr 05, 2026",
+    "devlog": "devlogs/DEVLOG_2026-W14.md",
+    "update": "updates/UPDATE_2026-W14.md",
+    "summary": "New product launch: Oeconomia Twitter Agent built from scratch with Claude API content generation, DALL-E 3 image creation, OEC logo watermarks, and a React monitoring dashboard."
+  },
+  {
+    "week": "2026-W13",
+    "date_range": "Mar 23 - Mar 29, 2026",
+    "devlog": "devlogs/DEVLOG_2026-W13.md",
+    "update": "updates/UPDATE_2026-W13.md",
+    "summary": "Refinement week: Eloqura swap list now updates instantly, Explorer indexer reduced to 30-second polling, cross-ecosystem theme consistency."
+  },
+  {
     "week": "2026-W12",
     "date_range": "Mar 16 - Mar 22, 2026",
     "devlog": "devlogs/DEVLOG_2026-W12.md",

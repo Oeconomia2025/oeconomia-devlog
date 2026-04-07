@@ -4,11 +4,16 @@
 
 ## Oeconomia Monthly
 
+* [March 2026](monthly/MONTHLY_2026-03.md)
 * [February 2026](monthly/MONTHLY_2026-02.md)
 
 ## Devlogs
 
-* [March 2026](devlogs/DEVLOG_2026-W12.md)
+* [April 2026](devlogs/DEVLOG_2026-W14.md)
+  * [Week 14: Mar 30 - Apr 05](devlogs/DEVLOG_2026-W14.md)
+
+* [March 2026](devlogs/DEVLOG_2026-W13.md)
+  * [Week 13: Mar 23 - Mar 29](devlogs/DEVLOG_2026-W13.md)
   * [Week 12: Mar 16 - Mar 22](devlogs/DEVLOG_2026-W12.md)
   * [Week 11: Mar 09 - Mar 15](devlogs/DEVLOG_2026-W11.md)
   * [Week 10: Mar 02 - Mar 08](devlogs/DEVLOG_2026-W10.md)
@@ -24,7 +29,11 @@
 
 ## Public Updates
 
-* [March 2026](updates/UPDATE_2026-W12.md)
+* [April 2026](updates/UPDATE_2026-W14.md)
+  * [Week 14: Mar 30 - Apr 05](updates/UPDATE_2026-W14.md)
+
+* [March 2026](updates/UPDATE_2026-W13.md)
+  * [Week 13: Mar 23 - Mar 29](updates/UPDATE_2026-W13.md)
   * [Week 12: Mar 16 - Mar 22](updates/UPDATE_2026-W12.md)
   * [Week 11: Mar 09 - Mar 15](updates/UPDATE_2026-W11.md)
   * [Week 10: Mar 02 - Mar 08](updates/UPDATE_2026-W10.md)
@@ -37,3 +46,8 @@
 
 * [January 2026](updates/UPDATE_2026-W05.md)
   * [Week 5: Jan 26 - Feb 01](updates/UPDATE_2026-W05.md)
+
+## Medium Articles
+
+* [March 2026](medium/MEDIUM_2026-03.md)
+* [February 2026](medium/MEDIUM_2026-02.md)
